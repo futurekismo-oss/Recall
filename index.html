@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyGen - Transform Your Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>📚 StudyGen</h1>
+            <p class="tagline">Transform boring PDFs into interactive study tools</p>
+            <button class="upload-btn" onclick="showFiles()">📤 Upload Your Notes</button>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🃏</div>
+                <h3>Flashcards</h3>
+                <p>Interactive flip cards for quick review</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Study Grids</h3>
+                <p>Visual layouts that make sense</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Practice Quiz</h3>
+                <p>Test yourself with instant feedback</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="file-modal" id="fileModal">
+        <div class="file-list">
+            <h2>Select a file to study</h2>
+            
+            <div class="file-item" onclick="openStudyApp('spanish')">
+                <div class="file-icon">🇪🇸</div>
+                <div class="file-info">
+                    <div class="file-name">Spanish Vocabulary.pdf</div>
+                    <div class="file-type">Chapter 5 - Food Words & Numbers</div>
+                </div>
+            </div>
+
+            <div class="file-item" onclick="openStudyApp('biology')">
+                <div class="file-icon">🧬</div>
+                <div class="file-info">
+                    <div class="file-name">Biology Notes.pdf</div>
+                    <div class="file-type">Cell Structure & Functions</div>
+                </div>
+            </div>
+
+            <div class="file-item" onclick="openStudyApp('history')">
+                <div class="file-icon">📜</div>
+                <div class="file-info">
+                    <div class="file-name">History Chapter 3.pdf</div>
+                    <div class="file-type">World War II Timeline</div>
+                </div>
+            </div>
+
+            <div class="file-item" onclick="openStudyApp('planets')">
+                <div class="file-icon">🪐</div>
+                <div class="file-info">
+                    <div class="file-name">Planets study.pdf</div>
+                    <div class="file-type">The 8 planets and their description</div>
+                </div>
+            </div>
+
+
+            <button class="close-btn" onclick="closeFiles()">Close</button>
+        </div>
+    </div>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+        <div class="loading-text">Generating your study materials...</div>
+        <div class="loading-subtext">Analyzing content and creating flashcards</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
